@@ -1,0 +1,1 @@
+DROP INDEX `super_browser_agent_userId_unique`;
