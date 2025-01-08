@@ -26,8 +26,7 @@ import { oneDark } from 'react-syntax-highlighter/dist/cjs/styles/prism';
 import { cn } from '@/lib/utils';
 import { ScriptsCombobox } from '../elements/scripts-combobox';
 import { BrowserAgent } from '@/server/db/schema';
-import { useToast } from "@/hooks/use-toast"
-
+import { useToast } from '@/hooks/use-toast';
 
 interface Message {
   id: string;
@@ -36,7 +35,13 @@ interface Message {
   error?: string;
 }
 
-export default function ChatInterface({ browserAgent, sandboxActive }: { browserAgent: BrowserAgent, sandboxActive: boolean }) {
+export default function ChatInterface({
+  browserAgent,
+  sandboxActive,
+}: {
+  browserAgent: BrowserAgent;
+  sandboxActive: boolean;
+}) {
   const { toast } = useToast();
   const [messages, setMessages] = useState<Message[]>([]);
   const [input, setInput] = useState('');
@@ -56,8 +61,8 @@ export default function ChatInterface({ browserAgent, sandboxActive }: { browser
         title: 'Error',
         description: 'Please start your agent first',
         variant: 'destructive',
-      })
-    };
+      });
+    }
     if (!input.trim() || isLoading) return;
 
     const userMessage: Message = {
@@ -119,9 +124,12 @@ export default function ChatInterface({ browserAgent, sandboxActive }: { browser
           <div className="flex h-full flex-col items-center justify-center gap-6">
             <div className="flex flex-col items-center justify-center gap-2 py-20 lg:py-40">
               <p className="max-w-xl text-center text-lg leading-relaxed tracking-tight text-muted-foreground md:text-xl">
-                You are connected to <span className="text-primary">{browserAgent.title}</span>
+                You are connected to{' '}
+                <span className="text-primary">{browserAgent.title}</span>
               </p>
-              <p className="text-sm text-slate-300">chat with your agent here</p>
+              <p className="text-sm text-slate-300">
+                chat with your agent here
+              </p>
               <ArrowDown />
             </div>
           </div>

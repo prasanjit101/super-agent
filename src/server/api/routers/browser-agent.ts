@@ -19,17 +19,19 @@ export const browserAgentRouter = createTRPCRouter({
   create: protectedProcedure
     .input(browserAgentInsertSchema)
     .mutation(async ({ ctx, input }) => {
-      console.log({input});
-      await ctx.db.insert(browserAgent).values({...input, userId: ctx.session.user.id});
+      console.log({ input });
+      await ctx.db
+        .insert(browserAgent)
+        .values({ ...input, userId: ctx.session.user.id });
     }),
 
-  list: protectedProcedure
-    .query(async ({ ctx, input }) => {
-      const browserAgents = await ctx.db.query.browserAgent.findMany({
-        where: (browserAgent, { eq }) => eq(browserAgent.userId, ctx.session.user.id),
-      });
-      return browserAgents;
-    }),
+  list: protectedProcedure.query(async ({ ctx, input }) => {
+    const browserAgents = await ctx.db.query.browserAgent.findMany({
+      where: (browserAgent, { eq }) =>
+        eq(browserAgent.userId, ctx.session.user.id),
+    });
+    return browserAgents;
+  }),
   get: protectedProcedure
     .input(browserAgentIdSchema)
     .query(async ({ ctx, input }) => {
@@ -45,12 +47,13 @@ export const browserAgentRouter = createTRPCRouter({
       const b = await ctx.db
         .update(browserAgent)
         .set(input)
-        .where(eq(browserAgent.id, input.id)).returning();
+        .where(eq(browserAgent.id, input.id))
+        .returning();
       return b;
     }),
   delete: protectedProcedure
     .input(browserAgentIdSchema)
     .mutation(async ({ ctx, input }) => {
       await ctx.db.delete(browserAgent).where(eq(browserAgent.id, input.id));
-    })
+    }),
 });

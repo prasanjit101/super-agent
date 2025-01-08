@@ -18,10 +18,9 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from '@/components/ui/popover';
-import { Script } from '@/server/db/schema';
 import Link from 'next/link';
 
-export function ScriptsCombobox({ scripts }: { scripts: Script[] }) {
+export function ScriptsCombobox({ scripts }: { scripts: any[] }) {
   const [open, setOpen] = React.useState(false);
   const [value, setValue] = React.useState('');
 

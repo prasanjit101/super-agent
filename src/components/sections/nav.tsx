@@ -116,7 +116,11 @@ export const LandingNav = () => {
         </div>
         <div className="flex w-full justify-end gap-4">
           <ThemeSwitcher />
-          <Link href={'https://github.com/prasanjit101/super-agent'} target='_blank' className={buttonVariants({ size: 'icon', variant: 'outline' })}>
+          <Link
+            href={'https://github.com/prasanjit101/super-agent'}
+            target="_blank"
+            className={buttonVariants({ size: 'icon', variant: 'outline' })}
+          >
             <FaGithub className="h-6 w-6" />
           </Link>
           <div className="hidden border-r md:inline"></div>

@@ -43,9 +43,7 @@ export const AnimatedHero = () => {
           </div>
           <div className="flex gap-4 flex-col">
             <h1 className="text-4xl md:text-6xl max-w-2xl tracking-tighter text-center font-regular">
-              <span className="text-spektr-cyan-50">
-                Browser in cloud that
-              </span>
+              <span className="text-spektr-cyan-50">Browser in cloud that</span>
               <span className="relative flex w-full justify-center overflow-hidden text-center md:pb-4 md:pt-1">
                 &nbsp;
                 {titles.map((title, index) => (
@@ -73,9 +71,9 @@ export const AnimatedHero = () => {
             </h1>
 
             <p className="text-lg md:text-xl leading-relaxed tracking-tight text-muted-foreground max-w-2xl text-center">
-              Superagent provides agentic browsers in the cloud. Create an account, spin up a
-              browser, and ask them to collect data, fill forms, surf
-              the web and perform actions.
+              Superagent provides agentic browsers in the cloud. Create an
+              account, spin up a browser, and ask them to collect data, fill
+              forms, surf the web and perform actions.
             </p>
           </div>
           <div className="flex flex-row gap-3">

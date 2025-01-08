@@ -38,7 +38,7 @@ import {
   sideNavItems,
 } from '@/config/nav';
 import { NavComponentsContainer } from '@/components/nav/nav-component-box';
-import { useSidebar } from "@/components/ui/sidebar"
+import { useSidebar } from '@/components/ui/sidebar';
 import { cn } from '@/lib/utils';
 
 export const AppSidebar = ({
@@ -47,10 +47,7 @@ export const AppSidebar = ({
 }: React.ComponentProps<typeof Sidebar> & { session?: Session }) => {
   const mainCollapsibleItems: SidebarCollapsibleItems[] = [];
 
-  const {
-    state,
-    open,
-  } = useSidebar()
+  const { state, open } = useSidebar();
 
   return (
     <Sidebar collapsible="icon" {...props}>
@@ -66,7 +63,9 @@ export const AppSidebar = ({
 					</div> */}
           <div className="p-2 text-primary flex items-center gap-2 font-semibold">
             <Bot />
-            <span className={cn((state === 'collapsed' ? 'hidden' : ''))}>SuperAgent</span>
+            <span className={cn(state === 'collapsed' ? 'hidden' : '')}>
+              SuperAgent
+            </span>
           </div>
         </div>
       </SidebarHeader>

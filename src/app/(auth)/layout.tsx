@@ -32,20 +32,20 @@ export default async function AppLayout({
     <main>
       <SessionProvider>
         <SidebarProvider defaultOpen={false}>
-            <AppSidebar session={session} />
-            <SidebarInset>
-              <header className="flex h-12 shrink-0 items-center gap-2 transition-[width,height] ease-linear group-has-[[data-collapsible=icon]]/sidebar-wrapper:h-12">
-                <div className="flex items-center gap-2 px-4">
-                  <SidebarTrigger className="-ml-1" />
-                  <Separator orientation="vertical" className="mr-2 h-4" />
-                  <GoBack />
-                </div>
-              </header>
-            <div className="p-4 overflow-y-auto w-full min-h-[60%]">
-                {children}
+          <AppSidebar session={session} />
+          <SidebarInset>
+            <header className="flex h-12 shrink-0 items-center gap-2 transition-[width,height] ease-linear group-has-[[data-collapsible=icon]]/sidebar-wrapper:h-12">
+              <div className="flex items-center gap-2 px-4">
+                <SidebarTrigger className="-ml-1" />
+                <Separator orientation="vertical" className="mr-2 h-4" />
+                <GoBack />
               </div>
-              {/* <Feedback teamId={"0fa930f9-720c-4b0a-b656-43f69f65fc50"} /> */}
-            </SidebarInset>
+            </header>
+            <div className="p-4 overflow-y-auto w-full min-h-[60%]">
+              {children}
+            </div>
+            {/* <Feedback teamId={"0fa930f9-720c-4b0a-b656-43f69f65fc50"} /> */}
+          </SidebarInset>
         </SidebarProvider>
       </SessionProvider>
     </main>

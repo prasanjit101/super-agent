@@ -38,7 +38,7 @@ export const browserAgentRelations = relations(browserAgent, ({ one }) => ({
 }));
 
 export const userbrowserAgentRelations = relations(users, ({ many }) => ({
-	browserAgent: many(browserAgent),
+  browserAgent: many(browserAgent),
 }));
 
 import { createSelectSchema } from 'drizzle-zod';
