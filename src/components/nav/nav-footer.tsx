@@ -92,7 +92,7 @@ export function NavFooter({
             <DropdownMenuSeparator />
             <DropdownMenuGroup>
               {(sidebarFooterItems ?? []).map((item) => (
-                <DropdownMenuItem>
+                <DropdownMenuItem key={item.name}>
                   <Link href={item.url} className="flex gap-2">
                     <item.icon className="w-5 h-5" />
                     {item.name}

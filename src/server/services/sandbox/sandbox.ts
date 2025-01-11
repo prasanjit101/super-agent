@@ -38,7 +38,7 @@ export async function startSandbox(b: BrowserAgent) {
       .where(eq(browserAgent.id, b.id));
 
     // Upload file to the sandbox to path '/'
-    sandbox.files.write('/browser_use.py', browserUseScript);
+    await sandbox.files.write('/browser_use.py', browserUseScript);
     // install required packages
     await sandbox.commands.run('pip install browser-use', { background: true });
     await sandbox.commands.run('playwright install', { background: true });

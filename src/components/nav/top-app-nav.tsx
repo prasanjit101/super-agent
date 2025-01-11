@@ -15,26 +15,7 @@ import {
 } from '@/components/ui/navigation-menu';
 import Image from 'next/image';
 
-const topNavItems: { title: string; href: string; description: string }[] = [
-  {
-    title: 'Alert Dialog',
-    href: '/docs/primitives/alert-dialog',
-    description:
-      'A modal dialog that interrupts the user with important content and expects a response.',
-  },
-  {
-    title: 'Hover Card',
-    href: '/docs/primitives/hover-card',
-    description:
-      'For sighted users to preview content available behind a link.',
-  },
-  {
-    title: 'Progress',
-    href: '/docs/primitives/progress',
-    description:
-      'Displays an indicator showing the completion progress of a task, typically displayed as a progress bar.',
-  },
-];
+const topNavItems: { title: string; href: string; description: string }[] = [];
 
 export function AppTopNavMenu() {
   return (
@@ -46,7 +27,7 @@ export function AppTopNavMenu() {
             <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
               <li className="row-span-3">
                 <NavigationMenuLink asChild>
-                  <a
+                  <Link
                     className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
                     href="/"
                   >
@@ -57,14 +38,13 @@ export function AppTopNavMenu() {
                       height={50}
                     />
                     <div className="mb-2 mt-4 text-lg font-medium">
-                      About Gentic
+                      About superagent
                     </div>
                     <p className="text-sm leading-tight text-muted-foreground">
-                      Gentic is an all in one AI agent platform for small teams
-                      and businesses. We ensure that you don't get left behind
-                      in the world of AI agents dominated world
+                      Superagent provides agentic browsers in the cloud to
+                      automate all your tasks
                     </p>
-                  </a>
+                  </Link>
                 </NavigationMenuLink>
               </li>
               {topNavItems.map((item) => (

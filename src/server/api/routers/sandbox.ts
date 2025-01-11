@@ -11,11 +11,17 @@ import { browserAgentSelectSchema } from '@/server/db/schema';
 export const sandboxRouter = createTRPCRouter({
   start: protectedProcedure
     .input(browserAgentSelectSchema)
-    .mutation(async ({ ctx, input }) => {}),
+    .mutation(async ({ ctx, input }) => {
+      console.log(input);
+    }),
   stop: protectedProcedure
     .input(browserAgentSelectSchema)
-    .mutation(async ({ ctx, input }) => {}),
+    .mutation(async ({ ctx, input }) => {
+      console.log(input);
+    }),
   stream: protectedProcedure
     .input(browserAgentSelectSchema)
-    .mutation(async ({ ctx, input }) => {}),
+    .mutation(async ({ ctx, input }) => {
+      console.log(input);
+    }),
 });

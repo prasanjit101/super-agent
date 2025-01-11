@@ -24,7 +24,6 @@ import remarkGfm from 'remark-gfm';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { oneDark } from 'react-syntax-highlighter/dist/cjs/styles/prism';
 import { cn } from '@/lib/utils';
-import { ScriptsCombobox } from '../elements/scripts-combobox';
 import { BrowserAgent } from '@/server/db/schema';
 import { useToast } from '@/hooks/use-toast';
 
