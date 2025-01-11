@@ -15,6 +15,13 @@
       "when": 1736279021006,
       "tag": "0001_groovy_lizard",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "6",
+      "when": 1736571221536,
+      "tag": "0002_military_wallop",
+      "breakpoints": true
     }
   ]
 }
