@@ -6,7 +6,7 @@ export const Feedback = ({
   title = 'Rate your experience',
   description = 'Your feedback helps us serve you better',
   position = 'bottom-right',
-  primaryColor = '#facc15',
+  primaryColor = '#ff832ade',
   textColor = '#292524',
 }: FeedbackWidgetProps) => {
   return (

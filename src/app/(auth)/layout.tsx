@@ -32,7 +32,7 @@ export default async function AppLayout({
   return (
     <main>
       <SessionProvider>
-        <SidebarProvider defaultOpen={false}>
+        <SidebarProvider>
           <AppSidebar session={session} />
           <SidebarInset>
             <header className="flex h-12 shrink-0 items-center gap-2 transition-[width,height] ease-linear group-has-[[data-collapsible=icon]]/sidebar-wrapper:h-12">
