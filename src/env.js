@@ -29,6 +29,7 @@ export const env = createEnv({
    */
   client: {
     // NEXT_PUBLIC_CLIENTVAR: z.string(),
+    NEXT_PUBLIC_MINDSHIP_TEAM_ID: z.string().optional(),
   },
 
   /**
@@ -43,6 +44,7 @@ export const env = createEnv({
     TURSO_AUTH_TOKEN: process.env.TURSO_AUTH_TOKEN,
     NODE_ENV: process.env.NODE_ENV,
     OPENROUTER_KEY: process.env.OPENROUTER_KEY,
+    NEXT_PUBLIC_MINDSHIP_TEAM_ID: process.env.NEXT_PUBLIC_MINDSHIP_TEAM_ID,
     E2B_API_KEY: process.env.E2B_API_KEY,
   },
   /**

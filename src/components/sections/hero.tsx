@@ -78,14 +78,14 @@ export const AnimatedHero = () => {
           </div>
           <div className="flex flex-row gap-3">
             <Link
-              href={'#app'}
+              href={'https://tally.so/r/nGXY8Q'}
               target="_blank"
               className={cn(
                 'gap-4',
                 buttonVariants({ size: 'lg', variant: 'outline' }),
               )}
             >
-              Share your thoughts <PhoneCall className="w-4 h-4" />
+              Contact Us <PhoneCall className="w-4 h-4" />
             </Link>
             <Link
               href={'/dashboard'}

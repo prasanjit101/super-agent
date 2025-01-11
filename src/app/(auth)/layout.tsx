@@ -20,6 +20,7 @@ import { Separator } from '@/components/ui/separator';
 import Link from 'next/link';
 import { ArrowLeft } from 'lucide-react';
 import { GoBack } from '@/components/go-back';
+import { env } from '@/env';
 
 export default async function AppLayout({
   children,
@@ -44,7 +45,7 @@ export default async function AppLayout({
             <div className="p-4 overflow-y-auto w-full min-h-[60%]">
               {children}
             </div>
-            {/* <Feedback teamId={"0fa930f9-720c-4b0a-b656-43f69f65fc50"} /> */}
+            {env.NEXT_PUBLIC_MINDSHIP_TEAM_ID && <Feedback teamId={env.NEXT_PUBLIC_MINDSHIP_TEAM_ID} />}
           </SidebarInset>
         </SidebarProvider>
       </SessionProvider>
